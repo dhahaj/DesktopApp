@@ -27,9 +27,31 @@ namespace DesktopApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks!");
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Fuck Off!");
+            //FolderBrowserDialog dialog = new FolderBrowserDialog();
+           // DialogResult result = dialog.ShowDialog();
+            OpenFileDialog d = new OpenFileDialog();
+            string s = d.InitialDirectory = "C:";
+            d.ShowDialog();
+            helloWorldLabel.Text = s;
+
+        }
+
+        private void debugInstructionsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helloWorldLabel_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(e.ToString());
         }
     }
 }
